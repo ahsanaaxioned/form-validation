@@ -99,14 +99,24 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 50%; 
   margin: 0 auto;
 }
  
 /*=================================
   main styling starts here
 =================================*/
+h1{
+  margin: 25px auto;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
 
+.input-content{
+  margin: 16px auto;
+}
 
 
 
