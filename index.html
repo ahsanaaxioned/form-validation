@@ -1,18 +1,18 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Form Validation</title>
+  <title>Form validation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
@@ -20,11 +20,68 @@
   <div class="container">
     <!--main section start-->
     <main>
-
+      <section class="form-section">
+        <div class="wrapper">
+          <h1>form validation</h1>
+          <form action="#FIXME" method="post" name="form">
+            <div class="input-group">
+              <div class="input-content">
+                <label>first name</label>
+                <input type="text" class="first-name">
+                <span class="text-errro firstName">error</span>
+              </div>
+              <div class="input-content">
+                <label>last name</label>
+                <input type="text" class="last-name">
+                <span class="text-errro lastName">error</span>
+              </div>
+              <div class="input-content">
+                <label>gender</label>
+                <input type="radio" name=gender class="male" value="male" checked>
+                <label>male</label>
+                <input type="radio" name=gender class="male" value="female">
+                <label>female</label>
+                <span class="text-errro gender-error">error</span>
+              </div>
+              <div class="input-content">
+                <label>address</label>
+                <textarea name="text" rows="10"></textarea>
+                <span class="text-errro address-error">error</span>
+              </div>
+              <div class="input-content checkbox">
+                <input type="checkbox" name="check" id="checked">
+                <span class="text-errro checkbox-error">error</span>
+                <label>terms and conditions</label>
+              </div>
+              <div class="input-content input-btn">
+                <div class="submit-btn">
+                  <input type="submit" name="submit" class="submit">
+                </div>
+                <div class="cancel-btn">
+                  <input type="submit" name="cancel" class="cancel" value="cancel">
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="storage-list">
+            <li class="storage-item">
+              <ul class="form-list">
+                <li class="form-item">name</li>
+                <li class="form-item">last name</li>
+                <li class="form-item">gender</li>
+                <li class="form-item">address</li>
+                <li class="form-item">edit</li>
+                <li class="form-item">delete</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <!--main section end-->
   </div>
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
