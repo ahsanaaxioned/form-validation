@@ -99,13 +99,43 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 50%; 
+  width: 80%; 
   margin: 0 auto;
 }
  
 /*=================================
   main styling starts here
 =================================*/
+.wrapper{
+  border: 2px solid #1c1c1c;
+    padding: 50px;
+    background: #0f4181;
+    color: #ffff;
+    border-radius: 15px;
+    margin-top: 35px;
+    position: relative;
+}
+
+.success{
+  display: none;
+  border: 2px solid #D4EDDA;
+  background: #D4EDDA;
+  color: #338121;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  width: 93%;
+  top: 10px;
+  left: 13px;
+}
+
+.success p{
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 h1{
   margin: 25px auto;
   font-size: 30px;
@@ -115,12 +145,106 @@ h1{
 }
 
 .input-content{
-  margin: 16px auto;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 
+.checkbox,
+.checkbox-error{
+  padding: 0 4%;
+  display: block;
+}
 
+.input-control{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-basis: 70%;
+  padding: 6px;
+}
+/* 
+.error-msg{
+ visibility: hidden;
+} */
+
+/* .error-msg.error-active{
+  display: block;
+} */
+
+label{
+  padding: 0px 4%;
+  flex-basis: auto;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.input-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-btn{
+  font-size: 20px;
+    padding: 5px;
+    text-transform: capitalize;
+    text-align: center;
+    background: #fff;
+    color: #1c1c1c;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+
+
+.cancel-btn{
+  margin:40px 35px;
+}
+
+.sub-btn:hover{
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+}
+
+.storage-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 2px solid ;
+  border-radius: 8px;
+}
+
+.storage-item{
+  width: 100%;
+}
+
+.form-list{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-item{
+  flex: 0 0 16.5%;
+  text-transform: capitalize;
+}
+
+.text-errro{
+  font-size: 18px;
+  color: rgb(252, 11, 11);
+  visibility: hidden;
+}
+
+.text-errro.text-active{
+  visibility:visible;
+}
 
 
 
