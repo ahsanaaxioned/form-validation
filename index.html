@@ -22,53 +22,60 @@
     <main>
       <section class="form-section">
         <div class="wrapper">
+          <div class="success">
+            <p><span>success..!</span> your form has been successfully submitted.</p>
+          </div>
           <h1>form validation</h1>
           <form action="#FIXME" method="post" name="form">
             <div class="input-group">
               <div class="input-content">
                 <label>first name</label>
-                <input type="text" class="first-name">
-              </div>
-              <div class="error-msg">
-                <span class="text-errro firstName">error</span>
+                <div class="input-control">
+                  <input type="text" class="first-name input">
+                  <span class="text-errro firstName">error</span>
+                </div>
               </div>
               <div class="input-content">
                 <label>last name</label>
-                <input type="text" class="last-name">
+                <div class="input-control">
+                  <input type="text" class="last-name input">
+                  <span class="text-errro lastName">error</span>
+                </div>
               </div>
-              <div class="error-msg">
-                <span class="text-errro lastName">error</span>
-              </div>
-              <div class="input-content">
+              <div class="input-content radio">
                 <label>gender</label>
-                <input type="radio" name=gender class="male" value="male" checked>
-                <label>male</label>
-                <input type="radio" name=gender class="male" value="female">
-                <label>female</label>
-              </div>
-              <div class="error-msg">
-                <span class="text-errro gender-error">error</span>
+                <div class="input-control">
+                  <div class="radio-control">
+                    <input type="radio" name=gender class="male " value="male">
+                    <label>male</label>
+                    <input type="radio" name=gender class="female " value="female">
+                    <label>female</label>
+                  </div>
+                  <div class="error-msg">
+                    <span class="text-errro gender-error">error</span>
+                  </div>
+                </div>
               </div>
               <div class="input-content">
                 <label>address</label>
-                <textarea name="text" rows="10"></textarea>
-              </div>
-              <div class="error-msg">
-                <span class="text-errro address-error">error</span>
+                <div class="input-control">
+                  <textarea name="text" rows="10" class="text-area input"></textarea>
+                  <span class="text-errro address-error">error</span>
+                </div>
               </div>
               <div class="input-content checkbox">
-                <input type="checkbox" name="check" id="checked">
+                <input type="checkbox" name="check" class="checked">
                 <label>terms and conditions</label>
               </div>
               <div class="error-msg">
                 <span class="text-errro checkbox-error">error</span>
               </div>
-              <div class="input-content input-btn">
+              <div class="input-btn">
                 <div class="submit-btn">
-                  <input type="submit" name="submit" class="submit">
+                  <input type="submit" name="submit" class=" sub-btn submit">
                 </div>
                 <div class="cancel-btn">
-                  <input type="submit" name="cancel" class="cancel" value="cancel">
+                  <input type="submit" name="cancel" class="sub-btn cancel" value="cancel">
                 </div>
               </div>
             </div>
