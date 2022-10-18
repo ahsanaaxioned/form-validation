@@ -26,7 +26,7 @@
             <p><span>success..!</span> your form has been successfully submitted.</p>
           </div>
           <h1>form validation</h1>
-          <form action="#FIXME" method="post" name="form">
+          <form action="#FIXME" method="post" name="form" class="form">
             <div class="input-group">
               <div class="input-content">
                 <label>first name</label>
@@ -46,10 +46,10 @@
                 <label>gender</label>
                 <div class="input-control">
                   <div class="radio-control">
-                    <input type="radio" name=gender class="male " value="male">
-                    <label>male</label>
-                    <input type="radio" name=gender class="female " value="female">
-                    <label>female</label>
+                    <input type="radio" name=gender id="male" class="male " value="male">
+                    <label for="male">male</label>
+                    <input type="radio" name=gender id="female" class="female " value="female">
+                    <label for="female">female</label>
                   </div>
                   <div class="error-msg">
                     <span class="text-errro gender-error">error</span>
@@ -64,8 +64,8 @@
                 </div>
               </div>
               <div class="input-content checkbox">
-                <input type="checkbox" name="check" class="checked">
-                <label>terms and conditions</label>
+                <input type="checkbox" name="check" id="terms" class="checked">
+                <label for="terms">terms and conditions</label>
               </div>
               <div class="error-msg">
                 <span class="text-errro checkbox-error">error</span>
@@ -75,7 +75,7 @@
                   <input type="submit" name="submit" class=" sub-btn submit">
                 </div>
                 <div class="cancel-btn">
-                  <input type="submit" name="cancel" class="sub-btn cancel" value="cancel">
+                  <input type="reset" name="cancel" class="sub-btn cancel" value="cancel">
                 </div>
               </div>
             </div>
