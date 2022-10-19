@@ -308,6 +308,7 @@
      border: 2px solid;
      border-radius: 8px;
      display: flex;
+     flex-direction: column;
      justify-content: space-between;
      align-items: center;
    }
@@ -315,8 +316,9 @@
    .storage-item { width: 100%; }
    
    .form-list {
-     padding: 20px;
+     padding: 10px;
      display: flex;
+     align-items: center;
      justify-content: space-between;
    }
    
@@ -332,7 +334,21 @@
    }
    
    .text-errro.text-active { visibility: visible; }
-   
+
+   .e-btn {
+      font-size: 18px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      color: #1c1c1c;
+     }
+
+    .e-btn:hover{
+      color: #fff;
+      background-color: #1c1c1c;
+      border: 2px solid #fff;
+    } 
    /*=================================
      main styling ends here
    =================================*/
