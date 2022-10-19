@@ -14,21 +14,19 @@ const form = document.querySelector(".form"),
     genderError = document.querySelector(".gender-error"),
     checkError = document.querySelector(".checkbox-error"),
     nameRagex = /^([a-zA-Z]){3,12}$/,
-    addRagex = /^([0-9-a-z-A-z\.\-]){5,50}/;
+    addRagex = /^[a-zA-z0-9\s.\-,]{5,50}/;
 var array = [];
-// global variable declaration start here
+// global variable declaration end here
 // form event start here
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     const errors = document.querySelectorAll(".text-active")
     if ((firstName.value) && (lastName.value) && (textArea.value) && (radioMale.checked || radioFemale.checked) && (checkBox.checked) && (errors.length === 0)) {
-        
-        // array.push(firstName.value, lastName.value, textArea.value, (radioMale.checked ? radioMale.value : radioFemale.value), checkBox.checked);
         let userData = {
-            firstName : firstName.value,
-            lastName : lastName.value,
+            firstName: firstName.value,
+            lastName: lastName.value,
             textArea: textArea.value,
-            radio : (radioMale.checked ? radioMale.value : radioFemale.value)
+            radio: (radioMale.checked ? radioMale.value : radioFemale.value)
         }
         array.push(userData);
         success.classList.add("show");
@@ -77,7 +75,7 @@ lastName.addEventListener("blur", function () {
 // validation for  address start here
 function addError() {
     let str = textArea.value;
-    if (nameRagex.test(str)) {
+    if (addRagex.test(str)) {
         addressErroe.classList.remove("text-active");
     }
     else {
@@ -101,26 +99,29 @@ function validGender() {
     }
 };
 
-function terms(){
-    console.log(checkBox.checked);
-     if (!checkBox.checked ) {
+function terms() {
+    if (!checkBox.checked) {
         checkError.innerText = "please select our T&C"
         checkError.classList.add("text-active");
-        console.log("if of check");
-    }  else {
+    } else {
         checkError.classList.remove("text-active");
-        console.log("JIJI");
     }
 };
 // validation for radio and terms end here
 // form value showing start
 function showData() {
-    console.log(array);
+    let empty = document.querySelectorAll(".data");
+    if (empty) {
+        empty.forEach(function (emp) {
+
+            emp.parentElement.removeChild(emp);
+        })
+    }
     array.forEach(function (element) {
-    let storageList = document.querySelector(".storage-list");
-    let list = document.createElement("li");
-    list.classList.add("storage-item");
-    list.innerHTML = `<ul class="form-list">
+        let storageList = document.querySelector(".storage-list");
+        let list = document.createElement("li");
+        list.className = "storage-item data";
+        list.innerHTML = `<ul class="form-list">
     <li class="form-item">${element.firstName}</li>
     <li class="form-item">${element.lastName}</li>
     <li class="form-item">${element.textArea}</li>
@@ -128,6 +129,23 @@ function showData() {
     <li class="form-item"><button class="e-btn edit-btn">edit</button></li>
     <li class="form-item"><button class="e-btn delete-btn">delete</button></li>
   </ul>`;
-  storageList.appendChild(list);
+        storageList.appendChild(list);
+        const delBtn = list.querySelector(".delete-btn");
+        delBtn.addEventListener("click", function () {
+            list.remove();
+        })
+
+        const editBtn = list.querySelector(".edit-btn");
+        editBtn.addEventListener("click", function () {
+            firstName.value = element.firstName;
+            lastName.value = element.lastName;
+            textArea.value = element.textArea;
+            if (radioMale.value === element.radio) {
+                radioMale.checked = true;
+            } else {
+                radioFemale.checked = true;
+            }
+        })
     })
-};
+}
+// form value showing start
